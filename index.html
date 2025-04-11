@@ -19,8 +19,14 @@
             <li><a href="#" class="text-purple-800 hover:text-purple-800 drop-shadow-[2px_2px_0px_black]">About</a></li>
             <li><a href="#" class="text-purple-800 hover:text-purple-800 drop-shadow-[2px_2px_0px_black]">Contact</a></li>
             <li><a href="#" class="text-purple-800 hover:text-purple-800 drop-shadow-[2px_2px_0px_black]">Pages</a></li>
-            
-            <button onclick="window.open('sign.html', '_blank')" class="bg-purple-500 text-white px-6 py-2 rounded-lg hover:bg-purple-800 drop-shadow-[2px_2px_0px_black]">SignUp</button>
+            <!-- Add to Cart Button -->
+          <button onclick="window.open('add.html', '_blank')" class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition">
+          Add to Cart</button>
+
+           <button onclick="window.open('sign.html', '_blank')" class="bg-purple-500 text-white px-6 py-2 rounded-lg hover:bg-purple-800 drop-shadow-[2px_2px_0px_black]">
+          SignUp</button>
+
+
         </ul>
     </nav>   
     
@@ -80,50 +86,54 @@
         <div class="bg-purple-400 p-4 rounded-lg shadow-lg">
           <img src="./assests/images/proof.jpeg" alt="image1" class="w-full rounded-lg">
           <h3 class="text-lg font-semibold mt-2">BTS - Proof</h3>
-              <p class="text-white font-bold">$39.99</p>
-              <button class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
+          <p class="text-white font-bold">$39.99</p>
+          <buAdd onclick="addToCart('BTS - Proof', '39.99', './assests/images/proof.jpeg')" class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
+              
         </div>
         <div class="bg-purple-400 p-4 rounded-lg shadow-lg">
           <img src="./assests/images/be.jpeg" alt="image2" class="w-full rounded-lg">
           <h3 class="text-lg font-semibold mt-2">BTS - BE</h3>
                <p class="text-white font-bold">$29.99</p>
-               <button class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
+               <button onclick="addToCart('BTS - BE', '29.99', './assests/images/be.jpeg')" class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
         </div>
         <div class="bg-purple-400 p-4 rounded-lg shadow-lg">
           <img src="./assests/images/love.jpeg" alt="image3" class="w-full rounded-lg">
           <h3 class="text-lg font-semibold mt-2">BTS - Love Yourself: Answer</h3>
                <p class="text-white font-bold">$34.99</p>
-               <button class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
+               <button onclick="addToCart('BTS - Love Yourself:Answer', '34.99', './assests/images/love.jpeg')" class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
         </div>
         <div class="bg-purple-400 p-4 rounded-lg shadow-lg">
-          <img src="./assests/images/map.jpeg" alt="image4" class="w-full rounded-lg">
+          <img src="./assests/images/map.jpeg" alt="BTS Map of the Soul 7 album cover" class="w-full rounded-lg">
           <h3 class="text-lg font-semibold mt-2">BTS - Map of the Soul: 7</h3>
-               <p class="text-white font-bold">$42.99</p>
-               <button class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
+          <p class="text-white font-bold">$42.99</p>
+          <button onclick="addToCart('BTS - Map of the Soul: 7', '42.99', './assets/images/map.jpeg')" 
+                  class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">
+            Add to Cart
+          </button>
         </div>
-        <div class="bg-purple-400 p-4 rounded-lg shadow-lg">
+        <div class="bg-purple-400 p-4 rounded-lg shadow-lg w-70">
           <img src="./assests/images/faceyourself.jpeg" alt="image5" class="w-full rounded-lg">
           <h3 class="text-lg font-semibold mt-2">BTS - Face Yourself</h3>
                <p class="text-white font-bold">$17.44</p>
-               <button class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
+               <button onclick="addToCart('BTS - Face Yourself', '17.44', './assests/images/faceyourself.jpeg')" class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
         </div>
-        <div class="bg-purple-400 p-4 rounded-lg shadow-lg">
+        <div class="bg-purple-400 p-4 rounded-lg shadow-lg w-70">
           <img src="./assests/images/BTS_Dark_and_Wild.jpg" alt="image6" class="w-full rounded-lg">
-          <h3 class="text-lg font-semibold mt-2">BTS - Dark & Wild7</h3>
+          <h3 class="text-lg font-semibold mt-2">BTS - Dark & Wild</h3>
                <p class="text-white font-bold">$22.93</p>
-               <button class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
+               <button onclick="addToCart('BTS - Dark & Wild', '22.93', './assests/images/BTS Dark and Wild.jpg')" class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
         </div>
-        <div class="bg-purple-400 p-4 rounded-lg shadow-lg">
+        <div class="bg-purple-400 p-4 rounded-lg shadow-lg w-70">
           <img src="./assests/images/BTS,_Wings.jpg" alt="image7" class="w-full rounded-lg">
           <h3 class="text-lg font-semibold mt-2">BTS - Wings</h3>
                <p class="text-white font-bold">$17</p>
-               <button class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
+               <button onclick="addToCart('BTS - Wings', '17', './assests/images/BTS, Wings.jpg')" class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
         </div>
-        <div class="bg-purple-400 p-4 rounded-lg shadow-lg">
+        <div class="bg-purple-400 p-4 rounded-lg shadow-lg w-70">
           <img src="./assests/images/BTS.webp" alt="image8" class="w-full rounded-lg">
           <h3 class="text-lg font-semibold mt-2">BTS - Map of the soul-Persona</h3>
                <p class="text-white font-bold">$26.98</p>
-               <button class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
+               <button onclick="addToCart('BTS - Map of the soul-Persona', '26.98', './assests/images/BTS.webp')" class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
         </div>
         </div>
 
@@ -135,51 +145,56 @@
             <img src="./assests/images/light.jpeg" alt="image1" class="w-full rounded-lg">
             <h3 class="text-lg font-semibold mt-2">BTS - Army-Bomb</h3>
                  <p class="text-white font-bold">$55</p>
-                 <button class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
+                 <button onclick="addToCart('BTS - Army-Bomb', '55', './assests/images/light.jpeg')" class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
           </div>
           <div class="bg-purple-400 p-4 rounded-lg shadow-lg">
             <img src="./assests/images/bag.jpeg" alt="image2" class="w-full rounded-lg">
             <h3 class="text-lg font-semibold mt-2">BTS - Bag set</h3>
                  <p class="text-white font-bold">$20</p>
-                 <button class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
+                 <button onclick="addToCart('BTS - Bag set', '20', './assests/images/bag.jpeg')" class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
           </div>
           <div class="bg-purple-400 p-4 rounded-lg shadow-lg">
             <img src="./assests/images/tshirt.webp" alt="image3" class="w-full rounded-lg">
             <h3 class="text-lg font-semibold mt-2">BTS - Dynamite T-Shirt</h3>
                  <p class="text-white font-bold">$25</p>
-                 <button class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
+                 <button onclick="addToCart('BTS - Dynamite T-Shirt', '25', './assests/images/tshirt.webp')" class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
           </div>
           <div class="bg-purple-400 p-4 rounded-lg shadow-lg">
             <img src="./assests/images/photocard.jpg" alt="image4" class="w-full rounded-lg">
             <h3 class="text-lg font-semibold mt-2">BTS - Photocard</h3>
                  <p class="text-white font-bold">$10</p>
-                 <button class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
+                 <button onclick="addToCart('BTS - Photocard', '10', './assests/images/photocard.jpg')" class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
           </div>
           <div class="bg-purple-400 p-4 rounded-lg shadow-lg">
             <img src="./assests/images/chain.jpeg" alt="image5" class="w-full rounded-lg">
             <h3 class="text-lg font-semibold mt-2">BTS - Titanium Steel</h3>
                  <p class="text-white font-bold">$25</p>
-                 <button class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
+                 <button onclick="addToCart('BTS - Titanium Steel', '25', './assests/images/chain.jpeg')" class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
           </div>
           <div class="bg-purple-400 p-4 rounded-lg shadow-lg">
             <img src="./assests/images/pen.webp" alt="image6" class="w-full rounded-lg">
             <h3 class="text-lg font-semibold mt-2">BTS - Pen</h3>
                  <p class="text-white font-bold">$5</p>
-                 <button class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
+                 <button onclick="addToCart('BTS - Pen', '5', './assests/images/pen.webp')" class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
           </div>
           <div class="bg-purple-400 p-4 rounded-lg shadow-lg">
             <img src="./assests/images/bracelet.jpeg" alt="image7" class="w-full rounded-lg h-60">
             <h3 class="text-lg font-semibold mt-2">BTS - Bracelet</h3>
                  <p class="text-white font-bold">$25</p>
-                 <button class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
+                 <button onclick="addToCart('BTS - Bracelet', '25', './assests/images/bracelet.jpeg')" class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
           </div>
           <div class="bg-purple-400 p-4 rounded-lg shadow-lg">
             <img src="./assests/images/notebook.jpeg" alt="image8" class="w-full rounded-lg h-60">
             <h3 class="text-lg font-semibold mt-2">BTS - Notebook</h3>
                  <p class="text-white font-bold">$10</p>
-                 <button class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
+                 <button onclick="addToCart('BTS - Notebook', '10', './assests/images/notebook.jpeg')" class="bg-white px-4 py-2 mt-3 rounded-full text-sm font-semibold hover:bg-purple-600 transition w-full">Add to Cart</button>
           </div>
       </section>
+
+      <div class="cart-total">
+        Total: $<span id="total-amount">0</span>
+    </div>
+    
       <!--section6-->
       <footer class="bg-purple-900 text-white py-6">
         <div class="container mx-auto flex flex-col items-center space-y-4">
@@ -192,5 +207,15 @@
           <p class="text-sm opacity-75">&copy; 2025 BTS Fansite. All Rights Reserved.</p>
         </div>
       </footer>
+      <script>
+        function addToCart(name, price, image) {
+          const item = { name, price, image };
+          const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
+          existingCart.push(item);
+          localStorage.setItem('cart', JSON.stringify(existingCart));
+          alert(`${name} added to cart!`);
+        }
+      </script>
+      
 </body>
 </html>

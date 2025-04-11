@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cart - BTS Army's Choice</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <div class="max-w-4xl mx-auto p-6">
+    <h1 class="text-3xl font-bold text-center text-purple-800 mb-6">🛒 Your Cart</h1>
+    
+    <div id="cart-items" class="space-y-4"></div>
+
+    <div class="text-right mt-6 text-xl font-semibold">
+      Total: $<span id="total-price">0.00</span>
+    </div>
+
+    <div class="mt-6 text-center">
+      <button class="bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-700 transition">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <script>
+    const cartData = JSON.parse(localStorage.getItem("cart")) || [];
+
+    function renderCart() {
+      const cartContainer = document.getElementById("cart-items");
+      const totalDisplay = document.getElementById("total-price");
+      cartContainer.innerHTML = "";
+
+      let total = 0;
+
+      cartData.forEach((item, index) => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+
+        const itemHTML = `
+          <div class="flex items-center justify-between bg-white p-4 rounded shadow">
+            <div class="flex items-center gap-4">
+              <img src="${item.image}" class="w-16 h-16 rounded object-cover" alt="${item.name}">
+              <div>
+                <h2 class="font-semibold">${item.name}</h2>
+                <p class="text-sm text-gray-500">$${item.price.toFixed(2)} x ${item.quantity}</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="changeQty(${index}, -1)" class="px-2 py-1 bg-gray-300 rounded">-</button>
+              <span>${item.quantity}</span>
+              <button onclick="changeQty(${index}, 1)" class="px-2 py-1 bg-gray-300 rounded">+</button>
+              <button onclick="removeItem(${index})" class="ml-4 text-red-500 hover:underline">Remove</button>
+            </div>
+          </div>
+        `;
+        cartContainer.innerHTML += itemHTML;
+      });
+
+      totalDisplay.textContent = total.toFixed(2);
+    }
+
+    function changeQty(index, delta) {
+      cartData[index].quantity += delta;
+      if (cartData[index].quantity <= 0) {
+        cartData.splice(index, 1);
+      }
+      localStorage.setItem("cart", JSON.stringify(cartData));
+      renderCart();
+    }
+
+    function removeItem(index) {
+      cartData.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cartData));
+      renderCart();
+    }
+
+    renderCart();
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+

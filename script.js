@@ -46,4 +46,71 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Initialize cart variables
+let cartCount = 0;
+let totalAmount = 0;
+
+// Select DOM elements
+const cartCountElement = document.getElementById('cart-count');
+const totalAmountElement = document.getElementById('total-amount');
+const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+// Add event listeners to all "Add to Cart" buttons
+addToCartButtons.forEach(button => {
+    button.addEventListener('click', function () {
+        // Increment cart count
+        cartCount++;
+        cartCountElement.textContent = cartCount;
+
+        // Get price from data attribute and update total
+        const price = parseFloat(button.getAttribute('data-price'));
+        totalAmount += price;
+        totalAmountElement.textContent = totalAmount.toFixed(2); // Display with 2 decimal places
+    });
+});
+
+
+
+   
+   
+   
+   
+
+   
+   
+
+   
+   
+   
+   
+   
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
